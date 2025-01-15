@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kredensial Elektronik</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  
+  <style>
+	.tabel-elemen tr td
+	{
+		text-align:left;
+		vertical-align:top;
+	}
+  </style>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../index3.html" class="brand-link">
+      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Kredensial</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Nama Pengguna</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="profil.html" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Profil
+              </p>
+            </a>
+          </li>
+		  
+		  <li class="nav-item">
+            <a href="berkas.html" class="nav-link">
+              <i class="nav-icon fas fa-archive"></i>
+              <p>
+                Berkas
+              </p>
+            </a>
+          </li>
+		  
+		  <li class="nav-item">
+            <a href="permohonan.html" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                Permohonan
+              </p>
+            </a>
+          </li>
+		  
+		  <li class="nav-item">
+            <a href="sub_permohonan.html" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                [Sub] Permohonan
+              </p>
+            </a>
+          </li>
+		  
+		  <li class="nav-item">
+            <a href="assesor_penugasan.html" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                [Assesor] Penugasan
+              </p>
+            </a>
+          </li>
+		  
+		  <li class="nav-item">
+            <a href="assesor_permohonan_fr-apl-02.html" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                [Assesor] Permohonan APL-02
+              </p>
+            </a>
+          </li>
+		  
+		  <li class="nav-item">
+            <a href="assesor_kredensial.html" class="nav-link active">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                [Assesor] Kredensial Berjalan
+              </p>
+            </a>
+          </li>
+		  
+          
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-10">
+            <h1></h1>
+          </div>
+          <div class="col-sm-2">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">General Form</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 style="text-align:center;">Proses Kredensial</h3><br />
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card card-primary card-tabs">
+				  <div class="card-header p-0 pt-1">
+					<ul class="nav nav-tabs" id="proses-kredensial-tabs" role="tablist">
+					  <li class="nav-item">
+						<a class="nav-link active" id="poa-01-tab" data-toggle="pill" href="#poa-01" role="tab" aria-controls="poa-01" aria-selected="true" title="Rencana Assesmen">FR-POA. 01</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="dat-01-a-tab" data-toggle="pill" href="#dat-01-a" role="tab" aria-controls="dat-01-a" aria-selected="false">FR-DAT-01 A</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="dat-01-b-tab" data-toggle="pill" href="#dat-01-b" role="tab" aria-controls="dat-01-b" aria-selected="false">FR-DAT-01 B</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="dat-01-c-tab" data-toggle="pill" href="#dat-01-c" role="tab" aria-controls="dat-01-c" aria-selected="false">FR-DAT-01 C</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="ac-01-tab" data-toggle="pill" href="#ac-01" role="tab" aria-controls="ac-01" aria-selected="false">FR-AC-01</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="ac-02-tab" data-toggle="pill" href="#ac-02" role="tab" aria-controls="ac-02" aria-selected="false">FR-AC-02</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="ac-03-tab" data-toggle="pill" href="#ac-03" role="tab" aria-controls="ac-03" aria-selected="false">FR-AC-03</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="banding-tab" data-toggle="pill" href="#banding" role="tab" aria-controls="banding" aria-selected="false">Banding</a>
+					  </li>
+					</ul>
+				  </div>
+				  <div class="card-body">
+					<div class="tab-content" id="proses-kredensial-tabs-content">
+					  <div class="tab-pane fade show active" id="poa-01" role="tabpanel" aria-labelledby="poa-01-tab">
+						<center><h4>FR-POA. 01. Rencana Assesmen</h4></center>
+						<div class="row">
+							<div class="col-md-12">
+							  <div id="accordion">
+								  <div class="card card-primary">
+									<div class="card-header">
+									  <h4 class="card-title w-100">
+										<a class="d-block w-100" data-toggle="collapse" href="#collapse1">
+										  KES.PG02.045.01 - Melakukan Perawatan Luka
+										</a>
+									  </h4>
+									</div>
+									<div id="collapse1" class="collapse" data-parent="#accordion">
+									  <div class="card-body">
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td colspan="6">Elemen Kompetensi : 1. Mengidentifikasi kebutuhan akan perawatan luka</td>
+											</tr>
+											<tr>
+												<td colspan="2">Komponen Assesmen Mandiri</td>
+												<td rowspan="2">Jenis Bukti (L, TL, T)</td>
+												<td rowspan="2">Metode Assesmen</td>
+												<td rowspan="2">Perangkat Assesmen</td>
+												<td rowspan="2">Sumber daya fisik atau material</td>
+											</tr>
+											<tr>
+												<td>Kriteria Unjuk Kerja :</td>
+												<td>Indikator Unjuk Kerja</td>
+											</tr>
+											<tr>
+												<td>1.1. Tingkat nyeri berhubungan dengan luka dan penggantian balutan didentifikasi.</td>
+												<td>Mampu mengidentifikasi tingkat nyeri berhubungan dengan luka dan penggantian balutan</td>
+												<td>L</td>
+												<td>tulis</td>
+												<td>Tertulis, Observasi</td>
+												<td>ATK</td>
+											</tr>
+											<tr>
+												<td>1.2. Resiko/tanda-tanda infeksi pada luka diidentifikasi</td>
+												<td>Mampu mengidentifikasi resiko/tanda-tanda infeksi pada luka</td>
+												<td>L</td>
+												<td>tulis</td>
+												<td>Tertulis, Observasi</td>
+												<td>ATK</td>
+											</tr>
+											<tr>
+												<td>1.3. Kondisi luka dikaji</td>
+												<td>Mampu mengkaji kondisi luka</td>
+												<td>L</td>
+												<td>tulis</td>
+												<td>Tertulis, Observasi</td>
+												<td>ATK</td>
+											</tr>
+											<tr>
+												<td>1.4. Proses penyembuhan diidentifikasi</td>
+												<td>Mampu mengidentifikasi proses penyembuhan</td>
+												<td>L</td>
+												<td>tulis</td>
+												<td>Tertulis, Observasi</td>
+												<td>ATK</td>
+											</tr>
+											<tr>
+												<td>1.5. Jenis perawatan yang diperlukan (oklusif, non oklusif, non ordhering, basah-kering, pengobatan diidentifikasi)</td>
+												<td>Mampu mengidentifikasi jenis perawatan yang diperlukan (oklusif, non oklusif, non ordhering, basah kering, pengobatan) </td>
+												<td>L</td>
+												<td>tulis</td>
+												<td>Tertulis, Observasi</td>
+												<td>ATK</td>
+											</tr>
+											<tr>
+												<td>1.6. Kebutuhan fasilitas seperti balutan (bandage) diidentifikasi</td>
+												<td>Mampu mengidentifikasi kebutuhan fasilitas seperti balutan (bandage)</td>
+												<td>L</td>
+												<td>tulis</td>
+												<td>Tertulis, Observasi</td>
+												<td>ATK</td>
+											</tr>
+										</table>
+										<br />
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td colspan="6">Elemen Kompetensi : 2. Mempersiapkan klien/pasien yang akan menerima perawatan luka</td>
+											</tr>
+											<tr>
+												<td colspan="2">Komponen Assesmen Mandiri</td>
+												<td rowspan="2">Jenis Bukti (L, TL, T)</td>
+												<td rowspan="2">Metode Assesmen</td>
+												<td rowspan="2">Perangkat Assesmen</td>
+												<td rowspan="2">Sumber daya fisik atau material</td>
+											</tr>
+											<tr>
+												<td>Kriteria Unjuk Kerja :</td>
+												<td>Indikator Unjuk Kerja</td>
+											</tr>
+											<tr>
+												<td>2.1. Tujuan dan prosedur dijelaskan</td>
+												<td>Mampu menjelaskan tujuan dan prosedur</td>
+												<td>L</td>
+												<td>tulis</td>
+												<td>Tertulis, Observasi</td>
+												<td>ATK</td>
+											</tr>
+											<tr>
+												<td>2.2. Rasa nyeri yang mungkin dialami dijelaskan</td>
+												<td>Mampu menjelaskan cara-cara untuk menurunkan rasa nyeri disaat penggantian balutan</td>
+												<td>L</td>
+												<td>tulis</td>
+												<td>Tertulis, Observasi</td>
+												<td>ATK</td>
+											</tr>
+											<tr>
+												<td>2.3. Cara-cara untuk menurunkan rasa nyeri disaat penggantian balutan dijelaskan</td>
+												<td>Mampu menjelaskan cara-cara untuk menurunkan rasa nyeri disaat penggantian balutan</td>
+												<td>L</td>
+												<td>observasi</td>
+												<td>Observasi</td>
+												<td>SPO, rekam medis, terapi obat, terapi non farmakologi</td>
+											</tr>
+										</table>
+										<br />
+										<p><strong>Jenis Bukti</strong> <i class="nav-icon fas fa-arrow-right"></i> L : Langsung | TL : Tidak Langsung | T : Tambahan</p>
+										
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td rowspan="2">Pemenuhan terhadap seluruh bagian unit standar kompetensi :</td>
+												<td>Batasan variabel</td>
+												<td>Panduan assesmen</td>
+												<td>Kompetensi kunci</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="checkbox" name="centang_1" id="pilihan_centang_1" value="1">
+														<label for="pilihan_centang_1">Ya</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="checkbox" name="centang_2" id="pilihan_centang_2" value="1">
+														<label for="pilihan_centang_2">Ya</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="checkbox" name="centang_3" id="pilihan_centang_3" value="1">
+														<label for="pilihan_centang_3">Ya</label>
+													</div>
+												</td>
+											</tr>
+										</table>
+										<br />
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td colspan="4">Peran dan tanggung jawab Tim/Personil terkait :</td>
+											</tr>
+											<tr>
+												<td>Nama</td>
+												<td>Jabatan/pekerjaan</td>
+												<td>Peran dan tanggung jawab dalam assesmen</td>
+											</tr>
+											<tr>
+												<td><input type="text" name="nama" class="form-control" /></td>
+												<td><input type="text" name="jabatan" class="form-control" /></td>
+												<td><input type="text" name="peran" class="form-control" /></td>
+											</tr>
+											<tr>
+												<td><input type="text" name="nama" class="form-control" /></td>
+												<td><input type="text" name="jabatan" class="form-control" /></td>
+												<td><input type="text" name="peran" class="form-control" /></td>
+											</tr>
+											<tr>
+												<td><input type="text" name="nama" class="form-control" /></td>
+												<td><input type="text" name="jabatan" class="form-control" /></td>
+												<td><input type="text" name="peran" class="form-control" /></td>
+											</tr>
+										</table>
+										<br />
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td colspan="5">Pengkajian metoda dan perangkat Assesmen</td>
+											</tr>
+											<tr>
+												<td colspan="2">Acuan (Unit Kompetensi)</td>
+												<td colspan="3">skkni</td>
+											</tr>
+											<tr>
+												<td colspan="3" rowspan="2">Kriteria pengkajian :</td>
+												<td colspan="2">memenuhi?</td>
+											</tr>
+											<tr>
+												<td>Ya</td>
+												<td>Tidak</td>
+											</tr>
+											<tr>
+												<td rowspan="4">Prinsip-prinsip Assesmen</td>
+												<td colspan="2">Validitas<br />Apakah aktifitas Assesmen memenuhi seluruh bagian dari acuan pembanding?</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="validitas_1" name="validitas">
+														<label for="validitas_1">
+															
+														</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="validitas_2" name="validitas">
+														<label for="validitas_2">
+															
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">Reliabilitas<br />
+													<ul>
+														<li>Apakah aktifitas secara konsisten mengukur apa yang seharusnya diukur?</li>
+														<li>Apakah instruksi-instruksi yang disediakan untuk kandidat memastikan penerapan yang konsisten dari aktifitas-aktifitas?</li>
+														<li>Dapatkah aktifitas-aktifitas digunakan oleh Assesor yang berbeda pada situasi yang berbeda dengan kandidat yang berbeda untuk mencapai hasil yang konsisten?</li>
+													</ul>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="reliabilitas_1" name="reliabilitas">
+														<label for="reliabilitas_1">
+															
+														</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="reliabilitas_2" name="reliabilitas">
+														<label for="reliabilitas_2">
+															
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">Fleksibilitas <br/>Apakah aktifitas memenuhi kebutuhan kandidat dan organisasi?</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="fleksibilitas_1" name="fleksibilitas">
+														<label for="fleksibilitas_1">
+															
+														</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="fleksibilitas_2" name="fleksibilitas">
+														<label for="fleksibilitas_2">
+															
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">Keadilan<br />Apakah aktifitas memenuhi kebutuhan dan karakteristik kandidat?<br />Apakah aktifitas bebas dari bias dan apakah dapat diadaptasikan untuk mencegah hambatan-hambatan pada individu dengan kebutuhan khusus?</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="keadilan_1" name="keadilan">
+														<label for="keadilan_1">
+															
+														</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="keadilan_2" name="keadilan">
+														<label for="keadilan_2">
+															
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td rowspan="4">Aturan-aturan Bukti</td>
+												<td colspan="2">Validitas<br />Apakah bukti diarahkan pada seluruh bagian dari acuan pembanding?</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="validitas2_1" name="validitas2">
+														<label for="validitas2_1">
+															
+														</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="validitas2_2" name="validitas2">
+														<label for="validitas2_2">
+															
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">Terkini<br />Apakah bukti terkini?</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="terkini_1" name="terkini">
+														<label for="terkini_1">
+															
+														</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="terkini_2" name="terkini">
+														<label for="terkini_2">
+															
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">Kecukupan<br />Apakah cukup bukti untuk memenuhi seluruh bagian acuan pembanding?</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="kecukupan_1" name="kecukupan">
+														<label for="kecukupan_1">
+															
+														</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="kecukupan_2" name="kecukupan">
+														<label for="kecukupan_2">
+															
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">Keaslian<br />Apakah bukti yang dikumpulkan merupakan pekerjaan kandidat sendiri?</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="keaslian_1" name="keaslian">
+														<label for="keaslian_1">
+															
+														</label>
+													</div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="keaslian_2" name="keaslian">
+														<label for="keaslian_2">
+															
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</table>
+										<br />
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td colspan="2">1.	Mengorganisasikan Assesmen :</td>
+											</tr>
+											<tr>
+												<td>Pengaturan sumber daya Assesmen</td>
+												<td>Peralatan sudah diseting diruang tempat assesmen<br />Persiapan alat untuk assesmen disiapkan sendiri oleh Assesi sendiri</td>
+											</tr>
+											<tr>
+												<td>Pengaturan dukungan spesialis</td>
+												<td>Jika terdapat hambatan secara teknis dapat menghubungi supervisor ruang rawat tempat assesmen</td>
+											</tr>
+											<tr>
+												<td>Pengaturan personil yang terlibat</td>
+												<td>Assesor dan Assesi diruang assesmen<br />Kepala ruang berada ditempat masing-masing<br />Pembantu umum di ruang peralatan</td>
+											</tr>
+											<tr>
+												<td>Rekaman dan laporan</td>
+												<td>Assesor mengambil perangkat assesmen di sekretariat assesmen kompetensi<br />Assesor memastikan semua dokumen lengkap dan terisi sesuai petunjuk<br />Assesor mengembalikan semua dokumen dan laporan kepada sekretaris maksimal 1 hari setelah assesmen berlangsung</td>
+											</tr>
+										</table>
+										<br />
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td style="width:50%;">Rekomendasi</td>
+												<td style="width:50%;">Catatan</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="icheck-primary d-inline" style="margin-right:60px;">
+														<input type="radio" id="rekomendasi_1" name="rekomendasi">
+														<label for="rekomendasi_1">
+															<i class="nav-icon fas fa-check-circle text-success"></i> Lanjut Assesmen
+														</label>
+													</div>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="rekomendasi_2" name="rekomendasi">
+														<label for="rekomendasi_2">
+															<i class="nav-icon fas fa-times-circle text-danger"></i> Tunda
+														</label>
+													</div>
+												</td>
+												<td><textarea rows="3" style="width:100%" class="form-control"></textarea></td>
+											</tr>
+										</table>
+										<br />
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td style="width:50%;">Asesi</td>
+												<td style="width:50%;">Asesor</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td><button class="btn btn-success">Tandatangani</button></td>
+											</tr>
+										</table>
+										
+									  </div> <!-- end card body -->
+									</div> <!-- end collapse -->
+								  </div> <!-- end card -->
+							  </div> <!-- end accordion -->
+							</div> <!-- end col 12 -->
+						</div> <!-- end row -->
+					  </div> <!-- end div poa-01 -->
+					  
+					  <div class="tab-pane fade" id="dat-01-a" role="tabpanel" aria-labelledby="dat-01-a-tab">
+						<center><h4>FR-DAT-01 A (Instrumen Ceklist Observasi)</h4></center>
+						<div class="row">
+							<div class="col-md-12">
+							  <div id="accordionDAT01">
+								  <div class="card card-primary">
+									<div class="card-header">
+									  <h4 class="card-title w-100">
+										<a class="d-block w-100" data-toggle="collapse" href="#collapseDAT01">
+										  KES.PG02.045.01 - Melakukan Perawatan Luka
+										</a>
+									  </h4>
+									</div>
+									<div id="collapseDAT01" class="collapse show" data-parent="#accordionDAT01">
+									  <div class="card-body">
+										<form id="form-dat-01">
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td colspan="5">
+													Petunjuk Penggunaan Cheklist Observasi untuk assesor:
+													<ol>
+														<li>Baca  seluruh format dengan seksama</li> 
+														<li>Perhatikan indikator ketercapaian dalam melakukan observasi, lampirkan SOP sesuai kebutuhan </li>
+														<li>Berikan instruksi yang jelas kepada assesi</li>
+													</ol>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="5">
+													Instruksi Untuk Peserta: lakukan tindakan di bawah ini dengan benar sesuai SOP.
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">Selama mendemostrasikan keterampilannya, apakah peserta melakukan </td>
+												<td colspan="2">Ketercapaian</td>
+											</tr>
+											<tr style="font-weight:bold;">
+												<td>No.IUK</td>
+												<td>Keterampilan</td>
+												<td>Indikator Ketercapaian</td>
+												<td>Ya</td>
+												<td>Tidak</td>
+											</tr>
+											<tr>
+												<td>1.1</td>
+												<td>Mengidentifikasi tingkat nyeri</td>
+												<td>Mampu mengobservasi tingkat nyeri pada saat dilakukan penggantian balutan.</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="1_1_y" name="1_1" value="1" class="ya">
+														<label for="1_1_y">
+															
+														</label>
+													 </div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="1_1_t" name="1_1" value="1" class="tidak">
+														<label for="1_1_t">
+															
+														</label>
+													 </div>
+												</td>
+											</tr>
+											<tr>
+												<td>1.2</td>
+												<td>Mengidentifikasi resiko/ tanda-tanda infeksi pada luka </td>
+												<td>Mampu mengobservasi kondisi luka, tanda – tanda infeksi yang muncul pada saat penggantian balutan.</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="1_2_y" name="1_2" value="1" class="ya">
+														<label for="1_2_y">
+															
+														</label>
+													 </div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="1_2_t" name="1_2" value="1" class="tidak">
+														<label for="1_2_t">
+															
+														</label>
+													 </div>
+												</td>
+											</tr>
+											<tr>
+												<td>1.3</td>
+												<td>Mengkaji kondisi luka saat ini</td>
+												<td>Mampu mengkaji kondisi luka dan mendokumentasikan pada Catatan Perkembangan Terintegrasi</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="1_3_y" name="1_3" value="1" class="ya">
+														<label for="1_3_y">
+															
+														</label>
+													 </div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="1_3_t" name="1_3" value="1" class="tidak">
+														<label for="1_3_t">
+															
+														</label>
+													 </div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="5">Demonstrasi yang ditunjukan oleh peserta:  <strong id="kompeten" style="margin-left:20px;">0</strong>  Kompeten   <strong id="belum_kompeten" style="margin-left:20px;">0</strong>  Belum Kompeten </td>
+											</tr>
+											<tr>
+												<td colspan="5">Umpan Balik Untuk Assesi:<br />
+													<textarea rows="3" style="width:100%" class="form-control"></textarea>
+												</td>
+											</tr>
+										</table>
+										</form>
+										<br />
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td style="width:50%;">Asesi</td>
+												<td style="width:50%;">Asesor</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td><button class="btn btn-success">Tandatangani</button></td>
+											</tr>
+										</table>
+									  </div> <!-- end card body -->
+									</div> <!-- end collapse -->
+								  </div> <!-- end card -->
+							  </div> <!-- end accordion -->
+							</div> <!-- end col 12 -->
+						</div> <!-- end row -->
+					  </div> <!-- end div dat-01 -->
+					  
+					  <div class="tab-pane fade" id="dat-01-b" role="tabpanel" aria-labelledby="dat-01-b-tab">
+						<center><h4>FR-DAT-01 B Instrumen Penilaian Secara Lisan</h4></center>
+						<div class="row">
+							<div class="col-md-12">
+							  <div id="accordionDAT01B">
+								  <div class="card card-primary">
+									<div class="card-header">
+									  <h4 class="card-title w-100">
+										<a class="d-block w-100" data-toggle="collapse" href="#collapseDAT01B">
+										  KES.PG02.045.01 - Melakukan Perawatan Luka
+										</a>
+									  </h4>
+									</div>
+									<div id="collapseDAT01B" class="collapse show" data-parent="#accordionDAT01B">
+									  <div class="card-body">
+										<form id="form-dat-01-b">
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td colspan="6">
+													Petunjuk Penggunaan Penilaian Lisan untuk Assesor:
+													<ol>
+														<li>Baca  seluruh format dengan seksama</li> 
+														<li>Perhatikan indikator ketercapaian jawaban Assesi</li>
+													</ol>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="6">
+													Instruksi Untuk Peserta: Jawablah pertanyaan dibawah ini dengan tepat dan jelas. 
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4">Pertanyaan berikut untuk dijawab oleh peserta</td>
+												<td colspan="2">Ketercapaian</td>
+											</tr>
+											<tr style="font-weight:bold;">
+												<td style="width:10%">No.IUK</td>
+												<td style="width:30%">Pertanyaan</td>
+												<td style="width:24%">Indikator Ketercapaian</td>
+												<td style="width:24%">Jawaban Asesi</td>
+												<td style="width:6%">Ya</td>
+												<td style="width:6%">Tidak</td>
+											</tr>
+											<tr>
+												<td>1.6</td>
+												<td>1.6.1 Sebutkan faktro-faktor yang mempengaruhi penyembuhan luka pasien?</td>
+												<td>Mampu menyebutkan 3
+													<ul>
+														<li>Anemia</li>
+														<li>Usia</li>
+														<li>Nutrisi</li>
+														<li>Vaskularisasi</li>
+														<li>kegemukan</li>
+													</ul>
+												</td>
+												<td><textarea rows="6" style="width:100%" class="form-control"></textarea></td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="b_1_y" name="b_1">
+														<label for="b_1_y">
+															
+														</label>
+													 </div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="b_1_t" name="b_1">
+														<label for="b_1_t">
+															
+														</label>
+													 </div>
+												</td>
+											</tr>
+											<tr>
+												<td>2.1</td>
+												<td>2.1.1	Sebutkan tehnik mengurangi nyeri pasien</td>
+												<td>Mampu menyebutkan 3
+													<ul>
+														<li>Relaksasi nafas panjang</li>
+														<li>Masase kulit</li>
+														<li>Kompres hangat</li>
+														<li>Pengalihan perhatian</li>
+														<li>Guide imagery</li>
+													</ul>
+												</td>
+												<td><textarea rows="6" style="width:100%" class="form-control"></textarea></td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="b_2_y" name="b_2">
+														<label for="b_2_y">
+															
+														</label>
+													 </div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="b_2_t" name="b_2">
+														<label for="b_2_t">
+															
+														</label>
+													 </div>
+												</td>
+											</tr>
+											<tr>
+												<td>2.1</td>
+												<td>2.1.2    Sebutkan cara mengukur skala nyeri pasien?</td>
+												<td>Mampu menyebutkan 3
+													<ul>
+														<li>Wong baker</li>
+														<li>Numerik scale</li>
+														<li>CPOT</li>
+														<li>FLACC</li>
+														<li>CRIES</li>
+													</ul>
+												</td>
+												<td><textarea rows="6" style="width:100%" class="form-control"></textarea></td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="b_3_y" name="b_3">
+														<label for="b_3_y">
+															
+														</label>
+													 </div>
+												</td>
+												<td>
+													<div class="icheck-primary d-inline">
+														<input type="radio" id="b_3_t" name="b_3">
+														<label for="b_3_t">
+															
+														</label>
+													 </div>
+												</td>
+											</tr>
+										</table>
+										</form>
+										<br />
+										<table class="table table-bordered tabel-elemen">
+											<tr>
+												<td style="width:50%;">Asesi</td>
+												<td style="width:50%;">Asesor</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td><button class="btn btn-success">Tandatangani</button></td>
+											</tr>
+										</table>
+									  </div> <!-- end card body -->
+									</div> <!-- end collapse -->
+								  </div> <!-- end card -->
+							  </div> <!-- end accordion -->
+							</div> <!-- end col 12 -->
+						</div> <!-- end row -->
+					  </div> <!-- end div dat-01 -->
+					  
+					  <div class="tab-pane fade" id="dat-01-c" role="tabpanel" aria-labelledby="dat-01-c-tab">
+						<h3 style="text-align:center;">FR-DAT-01 C. Instrumen Pertanyaan Tertulis</h3><br>
+
+                  <hr>
+                  Petunjuk Penggunaan Instrumen Pertanyaan Tertulis untuk Assesor:
+                  <ol style="padding: 0 0 0 25px;">
+                    <li>Baca seluruh format dengan seksama</li>
+                    <li>Perhatikan indikator ketercapaian jawaban Assesi</li>
+                  </ol>
+                  <hr>
+                  Instruksi Untuk Peserta :
+                  <ol style="padding: 0 0 0 25px;">
+                    <li>Jawablah soal dengan tepat dan jelas</li>
+                    <li>Bacalah soal dengan seksama dan jawablah langsung dengan memilih opsi jawaban di bawah
+                      pertanyaan</li>
+                    <li>Kerjakan dalam waktu XX menit</li>
+                  </ol>
+                  <hr>
+
+                  <h5 style="text-align: center; font-weight: 600;">Hasil Penilaian Tertulis</h5>
+                  <div class="row">
+                    <div class="column"
+                      style="float: left; width: 50%; vertical-align: middle; padding: 60px 20px 30px 20px;">
+                      <p style="vertical-align: middle;">
+                      <ul>
+                        <li>Jumlah Soal : 10</li>
+                        <li>Jumlah Soal Benar : 7</li>
+                        <li>Jumlah Soal Salah : 3</li>
+                        <li>Jumlah Soal Tidak Terjawab : 0</li>
+                      </ul>
+                      </p>
+                    </div>
+                    <div class="column"
+                      style="float: right; width: 50%; vertical-align: middle; padding: 0 20px 30px 20px;">
+                      <canvas id="myChart" style="width:10%; height: 10%; float: right;"></canvas>
+                      <script>
+                        const xValues = ["Salah", "Benar"];
+                        const yValues = [3, 7];
+                        const barColors = [
+                          "#dc3545",
+                          "#198754"
+                        ];
+
+                        new Chart("myChart", {
+                          type: "doughnut",
+                          data: {
+                            datasets: [{
+                              backgroundColor: barColors,
+                              data: yValues
+                            }],
+                            labels: xValues,
+                          },
+                          options: {
+                            title: {
+                              display: true,
+                            }
+                          }
+                        });
+                      </script>
+                    </div>
+
+                    <table class="table table-bordered tabel-elemen"
+                      style="width: 95%; margin-left: auto; margin-right: auto;">
+                      <tr>
+                        <td colspan="1" style="text-align: center; vertical-align: middle;"><strong>No IUK</strong></td>
+                        <td colspan="1" style="text-align: center; vertical-align: middle;"><strong>Pertanyaan</td>
+                        <td colspan="1" style="text-align: center; vertical-align: middle;"><strong>Jawaban Assesi</td>
+                        <td colspan="4" style="text-align: center; vertical-align: middle;"><strong>Opsi
+                            Jawaban</strong></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Apa yang anda ketahui tentang kanker?</td>
+                        <td>Penyakit yang disebabkan oleh pertumbuhan sel yang abnormal dan tak terkendali serta menekan
+                          sel sel normal</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Asesi bisa menyebutkan minimal 2 dari 3 cara identifikasi identitas pasien</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Melakukan koordinasi dengan perawat senior untuk validasi kegiatan pengukuran TTV</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>Penyakit yang disebabkan oleh pertumbuhan sel yang abnormal dan tak terkendali serta
+                                menekan sel sel normal</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Mengidentifikasi terlebih dahulu sesuai rencana asuhan keperawatan</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Apa yang anda ketahui tentang khemoterapi kanker?</td>
+                        <td>Ibu harus memilih sumber yang tepat untuk menyelasaikan masalah</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-x-circle-fill" style="color: red"></i></td>
+                              <td>Ibu harus memilih sumber yang tepat untuk menyelasaikan masalah</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>Penggunaan zat kimia untuk membunuh sel kanker dan mengganggu proses pembelahan sel kanker melalui cara merusak DNA atau produk proteinnya</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Komunikasi adalah proses penyampaian informasi (pesan, ide atau gagasan) oleh seseorang kpd orang lain dengan menggunakan lambang-lambang yang bermakna bagi kedua belah pihak</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Epidermis yang tahan air dan berfungsi sebagai penghalang terhadap infeksi
+							</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Apakah tujuan pemberian khemoterapi?</td>
+                        <td>Kuratif <br> Kontrol : Menghambat pertumbuhan sel kanker,Menghambat penyebaran Meningkatkan
+                          kwalitas hidup <br> Paliatif : Mengurangi gejala dan keluhan,Memperbaiki kwalitas hidup,
+                          Mengatasi komplikasi yang terjadi</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></td>
+                              <td>Kuratif <br> Kontrol : Menghambat pertumbuhan sel kanker,Menghambat penyebaran
+                                Meningkatkan kwalitas hidup <br> Paliatif : Mengurangi gejala dan keluhan,Memperbaiki
+                                kwalitas hidup, Mengatasi komplikasi yang terjadi</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Red / merah : luka bersih dan banyak vaskularisasi <br> Yellow/kuning : merupakan kondisi luka terkontaminasi / terinfeksi dan avaskularisasi <br> Black / kehitaman : ada jaringan nekrosis dan jaringan avaskularisasi</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Epidermis, yang tahan air dan berfungsi sebagai penghalang terhadap infeksi <br> Dermis, yang berfungsi sebagai lokasi untuk pelengkap kulit</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Kalor, Dolor, Tumor, Rubor</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Sebutkan rute pemberian kemoterapi!</td>
+                        <td>Tensi, Nadi, Respirasi, Suhu, Nyeri</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>Oral, topikal, suntik, intraperitoneal, intraarteri, intravena</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Menggunakan cara SBAR</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-x-circle-fill" style="color: red"></i></td>
+                              <td>Tensi, Nadi, Respirasi, Suhu, Nyeri</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Inflamasi, granulasi, maturasi</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Sebutkan efek samping pemberian obat kemoterapi!</td>
+                        <td>Kardiotoksik Nefrotoksik Nefrotoksik Hematology Hematology Depresi Sumsum Tulang Depresi
+                          Sumsum Tulang Paruparu Paruparu Alergy sampai anafilaktik Alergy sampai anafilaktik
+                          Imunosupressi Imunosupressi Diare Diare Stomatitis Stomatitis Nausea-Vomitus NauseaVomitus
+                          Alopecia</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Dermis, yang berfungsi sebagai lokasi untuk pelengkap kulit</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Black / kehitaman : ada jaringan nekrosis dan jaringan avaskularisasi</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>Kardiotoksik Nefrotoksik Nefrotoksik Hematology Hematology Depresi Sumsum Tulang
+                                Depresi Sumsum Tulang Paruparu Paruparu Alergy sampai anafilaktik Alergy sampai
+                                anafilaktik Imunosupressi Imunosupressi Diare Diare Stomatitis Stomatitis Nausea-Vomitus
+                                NauseaVomitus Alopecia</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Epidermis, yang tahan air dan berfungsi sebagai penghalang terhadap infeksi</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Sebutkan tanda-tanda ekstravasasi!</td>
+                        <td>• Tidak adanya blood return <br> • Aliran infus lambat <br> • Kebocoran pada kateter <br> •
+                          Ukuran dan kualitas vena <br> • Pembengkakan pada bagian tusukan kateter <br> • Eritema,
+                          inflamasi pada daerah tusukan <br> • Nyeri, rasa terbakar di sekitar vena atau sepanjang vena
+                          <br> • Pasien mengeluh rasanya berbeda saat ini
+                        </td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>• Stop infus segera, kanul kateter jangan diangkat <br> • Disconect infus (jangan kanul atau jarum) <br> • Tinggalkan kanul pada tempatnya dan lakukan aspirasi , hindari penekanan <br> • Beri tanda dengan spidol <br> • Beri antidotum</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>• Tinggikan daerah ektremitas <br> • Beri Kompres <br> • Lakukan pemotretan <br> • Lakukan pendokumentasian <br> • Buat kronologis <br> • Lapor dokter</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>• Iramanya teratur atau tidak <br> • Kekuatannya <br> • Jumlah nya <br> • Kedalamannya</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>• Tidak adanya blood return <br> • Aliran infus lambat <br> • Kebocoran pada kateter
+                                <br> • Ukuran dan kualitas vena <br> • Pembengkakan pada bagian tusukan kateter <br> •
+                                Eritema, inflamasi pada daerah tusukan <br> • Nyeri, rasa terbakar di sekitar vena atau
+                                sepanjang vena <br> • Pasien mengeluh rasanya berbeda saat ini
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Sebutkan cara pencegahan ekstravasasi!</td>
+                        <td>1.Hati-hati dalam memilih vena <br> 2. Bersihkan dengan lembut daerah penusukan <br> 3.
+                          Tusukan kanul dilengan yang berlawanan dari lengan yang sakit (mastektomi kanan, pasang infus
+                          sebelah kiri) <br> 4. Patenkan daerah tusukan <br> 5. Administrasikan obat vesikan dengan
+                          aliran infus <br> 6. Cek blood return tiap 2-3 cc pada waktu obat dimasukkan <br> 7. Tanyakan
+                          kepada pasien tentang rasa terbakar keluhan nyeri, sensasi dingin, tekanan, dll <br> 8.
+                          Alirkan cairan normal saline setelah pemberian obat <br> 9. Jika obat vesikan diberikan
+                          terus-menerus, obat harus diberikan melalui central lin</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Nadi : 60-100x/mnt <br> RR : 16-20x/mnt</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>1.Hati-hati dalam memilih vena <br> 2. Bersihkan dengan lembut daerah penusukan <br>
+                                3. Tusukan kanul dilengan yang berlawanan dari lengan yang sakit (mastektomi kanan,
+                                pasang infus sebelah kiri) <br> 4. Patenkan daerah tusukan <br> 5. Administrasikan obat
+                                vesikan dengan aliran infus <br> 6. Cek blood return tiap 2-3 cc pada waktu obat
+                                dimasukkan <br> 7. Tanyakan kepada pasien tentang rasa terbakar keluhan nyeri, sensasi
+                                dingin, tekanan, dll <br> 8. Alirkan cairan normal saline setelah pemberian obat <br> 9.
+                                Jika obat vesikan diberikan terus-menerus, obat harus diberikan melalui central lin</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Penyakit yang disebabkan oleh pertumbuhan sel abnormal yang tidak terkendali di dalam tubuh <br> Pertumbuhan sel abnormal ini dapat merusak sel normal di sekitarnya dan di bagian tubuh yang lain</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Nyeri akut bila terjadi < 3bln <br> Nyeri kronis > 3bln</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Jelaskan prosedur penanganan ekstravasasi!</td>
+                        <td>• Cemas <br> • Depresi <br> • Masalah seksualitas dan reproduksi</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>• Stop infus segera, kanul kateter jangan diangkat <br> • Disconect infus (jangan
+                                kanul atau jarum) <br> • Tinggalkan kanul pada tempatnya dan lakukan aspirasi , hindari
+                                penekanan <br> • Beri tanda dengan spidol <br> • Beri antidotum <br> • Tinggikan daerah
+                                ektremitas <br> • Beri Kompres <br> • Lakukan pemotretan <br> • Lakukan pendokumentasian
+                                <br> • Buat kronologis <br> • Lapor dokter
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>• Menghambat pertumbuhan sel kanker Menghambat penyebaran <br> • Meningkatkan kwalitas hidup <br> • Mengurangi gejala dan keluhan Memperbaiki kwalitas hidup <br> • Mengatasi komplikasi yang terjadi</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>• Gambaran diri <br> • Harga diri rendah <br> • Ganggaun hubungan social</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-x-circle-fill" style="color: red"></i></td>
+                              <td>• Cemas <br> • Depresi <br> • Masalah seksualitas dan reproduksi</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Sebutkan Masalah psikhososiospiritual pada pasien kemoterapi!</td>
+                        <td>Takut, cemas, jijik, malu, mual/muntah Isolasi sosial ¨ Gangguan gambaran diri(Body Image) ¨
+                          Pengobatan jangka panjang ¨ Biaya</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Pembengkakan pada bagian tusukan kateter</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Eritema, inflamasi pada daerah tusukan</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>Takut, cemas, jijik, malu, mual/muntah Isolasi sosial ¨ Gangguan gambaran diri(Body
+                                Image) ¨ Pengobatan jangka panjang ¨ Biaya</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Nyeri, rasa terbakar di sekitar vena atau sepanjang vena</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Sebutkan prinsip penyimpanan obat kemoterapi!</td>
+                        <td>Simpan dalam kemasan. Hindari cahaya matahari langsung Hindari suhu ekstrem ( misal>30°C)<
+                            <br> Penyimpanan suhu dingin (2-8)°C) <br> Penyimpanan suhu (20 - 25°C)</td>
+                        <td>
+                          <table class="table table-borderless tabel-elemen">
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Mengurangi gejala dan keluhan Memperbaiki kwalitas hidup</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Mengatasi komplikasi yang terjadi</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-circle"></i></td>
+                              <td>Pasien mengeluh rasanya berbeda saat ini</td>
+                            </tr>
+                            <tr>
+                              <td><i class="bi bi-check-circle-fill" style="color: green;"></i></td>
+                              <td>Simpan dalam kemasan. Hindari cahaya matahari langsung Hindari suhu ekstrem (misal>30°C) <br> Penyimpanan suhu dingin (2-8)°C) <br> Penyimpanan suhu (20 - 25°C)
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="padding: 0 35px;">
+                      Keterangan :
+                      <br>
+                      <i class="bi bi-check-circle-fill" style="color: green;"></i> : Jawaban yang benar
+                      <br>
+                      <i class="bi bi-x-circle-fill" style="color: red"></i> : Jawaban peserta salah
+                      <br>
+                      <i class="bi bi-circle"></i> : Jawaban tidak dipilih peserta
+                    </p>
+					<div class="row" style="margin: 0; padding: 0;">
+						<div class="col-md-6">
+						  <!-- general form elements -->
+						  <div class="card">
+							<div class="card-header" style="background-color: white;">
+							  <h3 class="card-title" style="text-align:center; vertical-align:middle; width:100%;">Assesi</h3>
+							</div>
+							<div class="card-body" style="padding: 32px;">
+							  <br />
+							  <center><img src="ttd_1.png" alt="ttd 1" height="80" /></center>
+							</div><!-- /.card-body -->
+							<hr style="margin: 0;">
+							<div class="card-header" style="background-color: white;">
+							  <p class="card-title" style="text-align:center; vertical-align:middle; width:100%;">Nama</p>
+							</div>
+						  </div> <!-- end card -->
+						</div> <!-- end col 6 -->
+						<div class="col-md-6">
+						  <!-- general form elements -->
+						  <div class="card" style="height: auto;">
+							<div class="card-header" style="background-color: white;">
+							  <h3 class="card-title" style="text-align:center;  width:100%;">Assesor</h3>
+							</div>
+							<div class="card-body" style="padding: 60px;">
+							  <br />
+							  <center><i>Klik "Proses Tanda Tangan" untuk memberikan tanda tangan</i></center>
+							</div><!-- /.card-body -->
+							<hr style="margin: 0;">
+							<div class="card-header" style="background-color: white;">
+							  <p class="card-title" style="text-align:center;  width:100%;">Nama</p>
+							</div>
+						  </div> <!-- end card-->
+						</div> <!-- end row -->
+		
+		
+					  <div class="col-md-6 offset-md-3" style="padding-bottom: 13px;">
+						<a href="#" class="btn btn-success btn-block">Proses Tanda Tangan</a>
+					  </div>
+					</div>
+
+                  </div><!-- /.card-body -->
+					  </div> <!-- end div dat-01-c-tab -->
+
+					  <div class="tab-pane fade" id="ac-01" role="tabpanel" aria-labelledby="ac-01-tab">
+						 Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+					  </div>
+					  <div class="tab-pane fade" id="ac-02" role="tabpanel" aria-labelledby="ac-02-tab">
+						 Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+					  </div>
+					  <div class="tab-pane fade" id="ac-01" role="tabpanel" aria-labelledby="ac-03-tab">
+						 Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+					  </div>
+					  <div class="tab-pane fade" id="banding" role="tabpanel" aria-labelledby="banding-tab">
+						 Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+					  </div>
+					</div> <!-- end tab content -->
+				  </div> <!-- end card body -->
+				</div> <!-- end card -->
+			</div> <!-- end col 12 -->
+		</div> <!-- end row -->
+		
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.1.0
+    </div>
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- InputMask -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    //Date picker
+    $('#reservationdate').datetimepicker({
+        format: 'L'
+    });
+	
+	$('#tabel_skkni').DataTable({
+      "paging": false,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": false,
+      "autoWidth": false,
+      "responsive": false,
+    });
+  })
+  
+  jQuery(document).ready(function ($) {
+	
+	$("#form-dat-01").change(function() {
+		
+		var totalPrice   = 0,
+            values       = [];
+        
+		$('.ya').each( function() {
+            if( $(this).is(':checked') ) {
+                values.push($(this).val());
+				totalPrice += parseInt($(this).val());
+            }
+        });
+
+		$("#kompeten").text(totalPrice);
+		
+		var totalPrice2   = 0,
+            values2       = [];
+        
+		$('.tidak').each( function() {
+            if( $(this).is(':checked') ) {
+                values2.push($(this).val());
+				totalPrice2 += parseInt($(this).val());
+            }
+        });
+
+		$("#belum_kompeten").text(totalPrice2);
+		
+	});
+	
+});
+
+  
+</script>
+</body>
+</html>
